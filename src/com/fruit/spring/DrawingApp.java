@@ -1,6 +1,6 @@
 package com.fruit.spring;
 
-import org.springframework.beans.factory.BeanFactory;
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class DrawingApp {
@@ -9,9 +9,11 @@ public class DrawingApp {
 		
 //		Triangle triangle = new Triangle();
 		
+//		BeanFactory factory = new ClassPathXmlApplicationContext("spring.xml");
+//		Triangle triangle = (Triangle)factory.getBean("triangle");
 		@SuppressWarnings("resource")
-		BeanFactory factory = new ClassPathXmlApplicationContext("spring.xml");
-		Triangle triangle = (Triangle)factory.getBean("triangle");
+		ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
+		Triangle triangle = (Triangle)context.getBean("triangle");
 		
 		triangle.draw();
 	}
