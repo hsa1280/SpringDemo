@@ -15,22 +15,22 @@
 		<constructor-arg index="2" value="hello"/>
 		-->
 		<property name="pointA" ref="zeroPoint" />
-		<property name="pointB" ref="Point2" />
-		<property name="pointC" ref="Point3" />
+		<property name="pointB">
+			<bean class="com.fruit.spring.Point">
+				<property name="x" value="-20" />
+				<property name="y" value="0" />
+			</bean>
+		</property>
+		<property name="pointC">
+			<bean class="com.fruit.spring.Point">
+				<property name="x" value="20" />
+				<property name="y" value="0" />
+			</bean>
+		</property>
 	</bean>
 	
 	<bean id="zeroPoint" class="com.fruit.spring.Point">
 		<property name="x" value="0" />
-		<property name="y" value="0" />
-	</bean>
-	
-	<bean id="Point2" class="com.fruit.spring.Point">
-		<property name="x" value="-20" />
-		<property name="y" value="0" />
-	</bean>
-	
-	<bean id="Point3" class="com.fruit.spring.Point">
-		<property name="x" value="20" />
 		<property name="y" value="0" />
 	</bean>
 	
