@@ -1,27 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
 <beans>
-	<bean id="triangle" class="com.fruit.spring.Triangle">
-		<property name="points">
-			<list>
-				<ref bean="zeroPoint"/>
-				<ref bean="point2"/>
-				<ref bean="point3"/>
-			</list>
-		</property>
+	<bean id="triangle" class="com.fruit.spring.Triangle" autowire="byName">
+		
 	</bean>
 	
-	<bean id="zeroPoint" class="com.fruit.spring.Point">
+	<bean id="pointA" class="com.fruit.spring.Point">
 		<property name="x" value="0" />
 		<property name="y" value="0" />
 	</bean>
 	
-	<bean id="point2" class="com.fruit.spring.Point">
+	<bean id="pointB" class="com.fruit.spring.Point">
 		<property name="x" value="-20"/>
 		<property name="y" value="0"/>
 	</bean>
 	
-	<bean id="point3" class="com.fruit.spring.Point">
+	<bean id="pointC" class="com.fruit.spring.Point">
 		<property name="x" value="20"/>
 		<property name="y" value="0"/>
 	</bean>
