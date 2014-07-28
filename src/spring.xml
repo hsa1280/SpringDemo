@@ -2,6 +2,15 @@
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
 <beans>
 	<bean id="triangle" class="com.fruit.spring.Triangle">
-		<property name="type" value="Equilateral" />
+		<!--<property name="type" value="Equilateral" />-->
+		<!--
+		<constructor-arg type="String" value="Equilateral"/>
+		<constructor-arg type="String" value="hello"/>
+		<constructor-arg type="int" value="20" />
+		-->
+		
+		<constructor-arg index="0" value="Equilateral"/>
+		<constructor-arg index="1" value="20"/>
+		<constructor-arg index="2" value="hello"/>
 	</bean>
 </beans>
