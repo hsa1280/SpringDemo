@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
 <beans>
-	<bean id="triangle" class="com.fruit.spring.Triangle" scope="prototype">
-		
+	<bean id="triangle" class="com.fruit.spring.Triangle" >
+		<property name="pointA" ref="pointA"/>
+		<property name="pointB" ref="pointB"/>
+		<property name="pointC" ref="pointC"/>
 	</bean>
 	
 	<bean id="pointA" class="com.fruit.spring.Point">
-		<property name="x" value="0" />
-		<property name="y" value="0" />
+		<property name="x" value="${pointA.pointX}" />
+		<property name="y" value="${pointA.pointY}" />
 	</bean>
 	
 	<bean id="pointB" class="com.fruit.spring.Point">
@@ -18,6 +20,10 @@
 	<bean id="pointC" class="com.fruit.spring.Point">
 		<property name="x" value="20"/>
 		<property name="y" value="0"/>
+	</bean>
+	
+	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations" value="pointsconfig.properties" />
 	</bean>
 	
 </beans>
