@@ -8,8 +8,8 @@
 	</bean>
 	
 	<bean id="pointA" class="com.fruit.spring.Point">
-		<property name="x" value="${pointA.pointX}" />
-		<property name="y" value="${pointA.pointY}" />
+		<property name="x" value="0" />
+		<property name="y" value="0" />
 	</bean>
 	
 	<bean id="pointB" class="com.fruit.spring.Point">
@@ -22,8 +22,8 @@
 		<property name="y" value="0"/>
 	</bean>
 	
-	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-		<property name="locations" value="pointsconfig.properties" />
+	<bean id="circle" class="com.fruit.spring.Circle" >
+		<property name="center" ref="pointA"/>
 	</bean>
 	
 </beans>
