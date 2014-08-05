@@ -14,8 +14,8 @@ public class DrawingApp {
 		@SuppressWarnings("resource")
 		ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
 		Shape shpae = (Shape)context.getBean("circle");
-		
 		shpae.draw();
+		
 	}
 
 }
