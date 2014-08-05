@@ -24,14 +24,13 @@
 		<property name="y" value="0"/>
 	</bean>
 	
-	<bean id="pointC" class="com.fruit.spring.Point">
+	<bean id="center" class="com.fruit.spring.Point">
 		<property name="x" value="20"/>
 		<property name="y" value="0"/>
 	</bean>
 	
-	<bean id="circle" class="com.fruit.spring.Circle" >
-	
-	</bean>
-	
 	<context:annotation-config/>
+	
+	<context:component-scan base-package="com.fruit.spring"/>
+	
 </beans>

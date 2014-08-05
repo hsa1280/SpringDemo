@@ -2,7 +2,9 @@ package com.fruit.spring;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
 
+@Component
 public class Circle implements Shape {
 
 	private Point center;
@@ -11,8 +13,7 @@ public class Circle implements Shape {
 		return center;
 	}
 
-	@Autowired
-	@Qualifier("circleRelated")
+	@Resource
 	public void setCenter(Point center) {
 		this.center = center;
 	}
